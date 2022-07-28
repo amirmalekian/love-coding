@@ -371,3 +371,59 @@ p {
   text-transform: capitalize;
   margin: 0 0 10px;
 }
+
+/* courses section */
+.courses-section {
+  background-color: var(--dark-800);
+  padding-bottom: 50px;
+}
+.course-item {
+  width: calc(25% - 30px);
+  margin: 0 15px 30px;
+}
+.course-img {
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s ease;
+}
+.course-item:hover .course-img {
+  transform: scale(0.9);
+  box-shadow: var(--shadow);
+}
+.course-img img {
+  width: 100%;
+}
+.course-img .course-price {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background-color: var(--dark-800);
+  color: var(--main-color);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+.course-info {
+  padding: 15px 0;
+}
+.course-info ul {
+  display: flex;
+  justify-content: space-between;
+}
+.course-info ul li {
+  color: var(--white-800);
+  text-transform: capitalize;
+  font-size: 14px;
+}
+.course-info ul li .fa-star {
+  color: var(--color-1);
+}
+.course-info h3 {
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: var(--white-900);
+  margin: 10px 0 0;
+}
