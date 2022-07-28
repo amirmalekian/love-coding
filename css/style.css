@@ -1,0 +1,148 @@
+/* fonts */
+/* @import url(); */
+
+/* global style */
+:root {
+  --main-color: #24caac;
+  --color-1: #eaa023;
+  --color-2: #e91e63;
+  --dark-800: #24292d;
+  --dark-700: #2f363e;
+  --white-900: #ffffff;
+  --white-800: rgba(255, 255, 255, 0.8);
+  --shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+::before,
+::after {
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+.container {
+  max-width: 1170px;
+  /* background-color: red; */
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.align-items-center {
+  align-items: center;
+}
+/* header */
+.header {
+  background-color: var(--dark-800);
+  padding: 10px 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  border-bottom: 1px solid var(--dark-700);
+}
+.header .logo {
+  /* background-color: blue; */
+  padding: 0 15px;
+}
+.header .logo a {
+  font-size: 24px;
+  color: var(--white-900);
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.header #nav-check {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+}
+.header #nav-check:focus ~ .nav-toggler {
+  box-shadow: 0 0 10px var(--main-color);
+}
+.header .nav-toggler {
+  height: 34px;
+  width: 44px;
+  border: 1px solid var(--main-color);
+  border-radius: 4px;
+  cursor: pointer;
+  display: none;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+}
+.header .nav-toggler span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: var(--main-color);
+  position: relative;
+}
+.header #nav-check:checked ~ .nav-toggler span {
+  background-color: transparent;
+}
+.header .nav-toggler span::before,
+.header .nav-toggler span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--main-color);
+}
+.header .nav-toggler span::before {
+  transform: translateY(-6px);
+}
+.header #nav-check:checked ~ .nav-toggler span::before {
+  transform: rotate(45deg);
+}
+.header .nav-toggler span::after {
+  transform: translateY(6px);
+}
+.header #nav-check:checked ~ .nav-toggler span::after {
+  transform: rotate(-45deg);
+}
+.header .nav {
+  /* background-color: yellow ; */
+  padding: 0 15px;
+}
+.header .nav ul li {
+  display: inline-block;
+  margin-left: 40px;
+}
+.header .nav ul li a {
+  font-size: 16px;
+  color: var(--white-900);
+  display: block;
+  padding: 10px 0;
+  text-transform: capitalize;
+  transition: all 0.5s ease;
+}
+.header .nav ul li a:hover {
+  color: var(--main-color);
+}
